@@ -1,10 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { INavItem } from './components/navbar/models/navbar.model';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'my-project';
+export class AppComponent implements OnInit{
+  navItems: INavItem[] = [];
+
+  constructor() { }
+
+  ngOnInit(): void {
+    this.navItems = this.getNavItems();
+  }
+
+  getNavItems(): INavItem[] {
+    return [
+      { path: '/home', title: 'Home'},
+      { path: '/events', title: 'Events'},
+      { path: '/blog', title: 'Blog'},
+      { path: '/contact', title: 'Contact'},
+    ];
+  }
 }
