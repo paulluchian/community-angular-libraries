@@ -10,6 +10,13 @@ This branch contains a working version of the application.
 
 This branch contains a navbar refactor, so it respects the Input - Output model. The component will act as an 'Black Box'
 
+## basic_v3
+
+This branch contains the navbar library integration.
+  - you will need https://github.com/paulluchian/community-angular-libraries-workspace/tree/main for generating the tgz pack file
+  - or you can just download and use it from: https://github.com/paulluchian/community-angular-libraries-workspace/blob/main/softvisionartifacts-navbar-0.0.1.tgz
+  - the navbar components were removed from the application
+
 # MyProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
