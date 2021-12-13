@@ -1,0 +1,6 @@
+@import './variables.scss';
+
+.content {
+    height: calc(100vh - #{$c-navbar-height} - #{$c-footer-height});
+    padding: $c-navbar-height 20px $c-footer-height 20px;
+}
