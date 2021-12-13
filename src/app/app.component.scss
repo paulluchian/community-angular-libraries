@@ -1,4 +1,4 @@
-@import './variables.scss';
+@import '../variables.scss';
 
 .content {
     height: calc(100vh - #{$c-navbar-height} - #{$c-footer-height});
