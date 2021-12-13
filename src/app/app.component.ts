@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { INavItem } from './components/navbar/models/navbar.model';
+import { INavItem } from '@softvisionartifacts/navbar/lib/models/navbar.model';
 
 @Component({
   selector: 'app-root',
