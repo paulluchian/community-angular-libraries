@@ -1,5 +1,7 @@
 # Branches
 
+The entire process for creating a navbar library will be reflected using different branches
+
 ## basic_v1
 
 This branch contains a working version of the application.
