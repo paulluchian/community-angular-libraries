@@ -1,12 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { INavItem } from './models/navbar.model';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+
+  @Input() logo = '';
+
+  @Input() items: INavItem[] = [];
 
   currentPath = '';
 
@@ -24,7 +29,8 @@ export class NavbarComponent implements OnInit {
       });
    }
 
-  navigateTo(url: string): void {
+  navigateTo(url: string | undefined): void {
+    if (!url) { return; }
     this.router.navigateByUrl(url);
   }
 

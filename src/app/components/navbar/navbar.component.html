@@ -1,11 +1,10 @@
 <div class="c-navbar">
-    <div class="c-navbar__logo" (click)="navigateTo('/home')">
-        <img src="../../../assets/logo.png" width="124" height="40"/>
+    <div class="c-navbar__logo" (click)="navigateTo(items[0]?.path)">
+        <img [src]="logo" alt="logo" width="124" height="40"/>
     </div>
     <ul class="c-navbar__container">
-        <li class="c-navbar__item" [ngClass]="{'is-active': currentPath === '/home' }"><a class="c-navbar__link" (click)="navigateTo('/home')">Home</a></li>
-        <li class="c-navbar__item" [ngClass]="{'is-active': currentPath === '/events' }"><a class="c-navbar__link" (click)="navigateTo('/events')">Events</a></li>
-        <li class="c-navbar__item" [ngClass]="{'is-active': currentPath === '/blog' }"><a class="c-navbar__link" (click)="navigateTo('/blog')">Blog</a></li>
-        <li class="c-navbar__item" [ngClass]="{'is-active': currentPath === '/contact' }"><a class="c-navbar__link" (click)="navigateTo('/contact')">Contact</a></li>
+        <li *ngFor="let item of items" class="c-navbar__item" [ngClass]="{'is-active': currentPath === item.path }">
+            <a class="c-navbar__link" (click)="navigateTo(item.path)">{{ item.title }}</a>
+        </li>
     </ul>
 </div>
