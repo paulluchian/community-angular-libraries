@@ -1,10 +1,10 @@
 # Branches
 
-# basic_v1
+## basic_v1
 
 This branch contains a working version of the application.
 
-# basic_v2
+## basic_v2
 
 This branch contains a navbar refactor, so it respects the Input - Output model. The component will act as an 'Black Box'
 
